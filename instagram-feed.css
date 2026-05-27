@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.instagram-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(224, 124, 124, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.instagram-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.instagram-icon {
+    width: 60px;
+    height: 60px;
+    color: #e0124f;
+    flex-shrink: 0;
+}
+
+.header-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.handle {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.follow-btn {
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(224, 18, 79, 0.2);
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+.follow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(224, 18, 79, 0.3);
+}
+
+.follow-btn:active {
+    transform: translateY(0);
+}
+
+.feed-container {
+    margin-bottom: 60px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.feed-container iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 600px;
+}
+
+.instagram-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stat {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e0124f;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instagram-section {
+        padding: 40px 0;
+    }
+
+    .instagram-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+    }
+
+    .header-content {
+        width: 100%;
+    }
+
+    .instagram-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-content h2 {
+        font-size: 24px;
+    }
+
+    .follow-btn {
+        width: 100%;
+    }
+
+    .feed-container {
+        margin-bottom: 40px;
+    }
+
+    .instagram-stats {
+        grid-template-columns: 1fr;
+        padding: 40px 0;
+    }
+
+    .stat {
+        padding: 20px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-section {
+        padding: 30px 0;
+    }
+
+    .instagram-section::before {
+        width: 300px;
+        height: 300px;
+        right: -20%;
+    }
+
+    .header-content h2 {
+        font-size: 20px;
+    }
+
+    .handle {
+        font-size: 14px;
+    }
+
+    .follow-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .feed-container iframe {
+        min-height: 400px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.instagram-section {
+    animation: fadeInUp 0.8s ease-out;
+}

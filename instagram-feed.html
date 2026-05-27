@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed - Van der Wafel</title>
+    <link rel="stylesheet" href="instagram-feed.css">
+</head>
+<body>
+    <section class="instagram-section">
+        <div class="container">
+            <div class="instagram-header">
+                <div class="header-content">
+                    <svg class="instagram-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.2c5.413 0 9.8 4.387 9.8 9.8s-4.387 9.8-9.8 9.8S2.2 17.413 2.2 12 6.587 2.2 12 2.2z"/>
+                    </svg>
+                    <div>
+                        <h2>Volg ons op Instagram</h2>
+                        <p class="handle">@meneervanderwafel</p>
+                    </div>
+                </div>
+                <a href="https://instagram.com/meneervanderwafel" target="_blank" class="follow-btn">
+                    Volgen
+                </a>
+            </div>
+
+            <div class="feed-container">
+                <iframe src="https://www.instagram.com/meneervanderwafel/embed" width="100%" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+
+            <div class="instagram-stats">
+                <div class="stat">
+                    <span class="stat-value" id="follower-count">Laden...</span>
+                    <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">Stroopwafels</span>
+                    <span class="stat-label">Specialiteit</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">Dagelijks</span>
+                    <span class="stat-label">Nieuwe Content</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="instagram-feed.js"></script>
+</body>
+</html>
